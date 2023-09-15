@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import Cart from "../cart/cart";
 
@@ -29,14 +30,19 @@ const Carts = ({ carts }) => {
 
   return (
     <div className="md:w-1/3">
-      <h2 className="text-center text-3xl">Charts: {carts.length}</h2>
-      <h3>Credit Remaining hour: {remainingCredit >= 0 ? remainingCredit : 0}</h3>
+      <h2 className="text-center text-sm">You have added {carts.length} courses to your cart.</h2>
+      <hr />
+
+      <h3 className="text-[#2F80ED] text-center text-xl">Credit Remaining hour: {remainingCredit >= 0 ? remainingCredit : 0}</h3>
+      <h3>Course Name:</h3>
       {carts.map((cart, index) => (
         <div key={cart.id}>
           <Cart cart={cart} index={index}></Cart>
         </div>
       ))}
+      <hr />
       <h3>Total Credit hour: {totalHour}</h3>
+      <hr />
       <h3>Total Price: ${totalPrice.toFixed(0)} USD</h3>
     </div>
   );

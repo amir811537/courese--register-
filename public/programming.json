@@ -3,7 +3,7 @@
       "id": 1,
       "course_name": "Introduction to Programming",
       "img": "https://i.ibb.co/VN3kdj9/Rectangle-2-2.png",
-      "credit": 3,
+      "credit": 1,
       "price": 49.99,
       "details": "Learn the fundamentals of programming with this introductory course."
     },
@@ -11,7 +11,7 @@
       "id": 2,
       "course_name": "Web Development Bootcamp",
       "img": "https://i.ibb.co/ys4LCQ1/Rectangle-2-1.png",
-      "credit": 6,
+      "credit": 2,
       "price": 149.99,
       "details": "A comprehensive bootcamp covering HTML, CSS, and JavaScript."
     },
@@ -43,7 +43,7 @@
       "id": 6,
       "course_name": "Digital Marketing Essentials",
       "img": "https://i.ibb.co/pbbkK26/Rectangle-2-3.png",
-      "credit": 3,
+      "credit": 10,
       "price": 69.99,
       "details": "Learn the basics of online marketing and SEO."
     },

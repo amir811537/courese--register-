@@ -12,25 +12,13 @@ function App() {
 
   const handleAddToCarts = (course) => {
     const itemExists = carts.some((cartItem) => cartItem.id === course.id);
-    
-    // Calculate the total credit hours if the course is added
     const newTotalHour = itemExists ? totalHour : totalHour + course.credit;
     
-    // Check if adding the course would exceed 20 credit hours
+
     if (newTotalHour <= 20) {
       if (itemExists) {
-        toast.warn("You already selected this course!", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        toast.warn("You already selected this course!");
       } else {
-        // Add the item to the cart
         setCarts((prevCartItems) => [...prevCartItems, course]);
         setTotalHour(newTotalHour);
       }
