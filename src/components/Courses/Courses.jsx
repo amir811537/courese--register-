@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Course from "../Course/Course";
 
-const Courses = () => {
+const Courses = ({handleAddToCarts}) => {
     const[courses,setCourses]=useState([]);
 
     useEffect(()=>{
@@ -14,15 +14,16 @@ const Courses = () => {
 
 
     return (
-        <div className="md:w-2/3">
-            <h1>Courses Name:{courses.length}</h1>
+        <div className="md:grid grid-cols-3 py-4">
         
 
 {
     courses.map(course =><Course 
     key={course.id} 
-    course={course}>
-        
+    course={course}
+    handleAddToCarts={handleAddToCarts}
+    >
+
     </Course>)
 }
 
