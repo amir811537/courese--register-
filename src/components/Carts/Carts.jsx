@@ -32,11 +32,12 @@ const Carts = ({ carts }) => {
     <div className="md:w-1/3">
       <h2 className="text-center text-sm">You have added {carts.length} courses to your cart.</h2>
       <hr />
-
+<br />
       <h3 className="text-[#2F80ED] text-center text-xl">Credit Remaining hour: {remainingCredit >= 0 ? remainingCredit : 0}</h3>
-      <h3>Course Name:</h3>
+      <hr />
+      <h3 className="text-xl font-bold">Course Name:</h3>
       {carts.map((cart, index) => (
-        <div key={cart.id}>
+        <div className="text-[#1C1B1B99]" key={cart.id}>
           <Cart cart={cart} index={index}></Cart>
         </div>
       ))}

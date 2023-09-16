@@ -13,8 +13,6 @@ function App() {
   const handleAddToCarts = (course) => {
     const itemExists = carts.some((cartItem) => cartItem.id === course.id);
     const newTotalHour = itemExists ? totalHour : totalHour + course.credit;
-    
-
     if (newTotalHour <= 20) {
       if (itemExists) {
         toast.warn("You already selected this course!");
@@ -31,7 +29,8 @@ function App() {
     <>
       <Header></Header>
       <div className="md:flex max-w-screen-2xl mx-auto">
-        <Courses handleAddToCarts={handleAddToCarts}></Courses>
+      <Courses handleAddToCarts={handleAddToCarts}></Courses>
+        
         <Carts carts={carts}></Carts>
       </div>
       <ToastContainer />

@@ -7,9 +7,9 @@ const Course = ({ course, handleAddToCarts }) => {
     <div>
       {/* <h2 className="text-4xl">{course_name}</h2> */}
 
-      <div className="card w-11/12 bg-base-100 shadow-xl">
+      <div className="card w-full bg-base-100 shadow-xl">
         <figure>
-          <img src={img} alt="Shoes" />
+          <img className="max-h-40 " src={img} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{course_name}</h2>
@@ -20,7 +20,7 @@ const Course = ({ course, handleAddToCarts }) => {
               <BsCurrencyDollar />
               <p>price: {price}</p>
             </div>
-            <div className="flex items-center space-x-3">
+            <div className="flex gap-4 items-center space-x-3">
               <BsBook />
               <p>Cridit:{credit}hr</p>
             </div>

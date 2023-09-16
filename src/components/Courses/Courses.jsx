@@ -12,7 +12,7 @@ const Courses = ({ handleAddToCarts }) => {
   }, []);
 
   return (
-    <div className="md:grid grid-cols-3 py-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
       {courses.map((course) => (
         <Course
           key={course.id}
