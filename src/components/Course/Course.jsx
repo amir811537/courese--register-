@@ -5,8 +5,6 @@ const Course = ({ course, handleAddToCarts }) => {
 
   return (
     <div>
-      {/* <h2 className="text-4xl">{course_name}</h2> */}
-
       <div className="card w-full bg-base-100 shadow-xl">
         <figure>
           <img className="max-h-40 " src={img} alt="Shoes" />
